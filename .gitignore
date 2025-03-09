@@ -8,5 +8,4 @@ dist
 
 .eggs
 .idea
-.coverage
 .DS_Store
