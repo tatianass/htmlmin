@@ -1,6 +1,13 @@
 jobs:
   unit-test:
     name: Run unit tests
+    on:
+      pull_request:
+        types: [opened, reopened]
+      push:
+        branches:
+          - 'master'
+          - 'releases/**'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
