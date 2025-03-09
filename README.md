@@ -1,4 +1,4 @@
-![Coverage](https://codecov.io/gh/tatianass/htmlmin/branch/main/graph/badge.svg)
+[![codecov](https://codecov.io/gh/tatianass/htmlmin/graph/badge.svg?token=B5NF1L4QYG)](https://codecov.io/gh/tatianass/htmlmin)
 
 Project forked from [mankyd](https://github.com/mankyd/htmlmin)'s project in order to fix it for Python 13.3
 
