@@ -31,7 +31,7 @@ jobs:
           uv sync
       - name: Test with pytest
         run: |
-          pytest --cov --junitxml=junit.xml
+          uv run pytest --cov=src --log-level=WARNING --disable-pytest-warnings --junitxml=junit.xml -o junit_family=legacy
       # Copy and paste the codecov/test-results-action here
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v5
