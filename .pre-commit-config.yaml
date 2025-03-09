@@ -1,0 +1,33 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: check-ast
+        name: Check that Python files are valid
+      - id: check-merge-conflict
+        name: Check that merge conflicts are not being committed
+      - id: check-yaml
+        name: Verify that yaml files are valid
+      - id: end-of-file-fixer
+        name: Make sure that there is an empty line at the end
+      - id: trailing-whitespace
+        name: Remove trailing whitespace at end of line
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    # Ruff version.
+    rev: v0.9.7
+    hooks:
+      # Run the linter.
+      - id: ruff
+        name: Run ruff (Python linter)
+        args: [--fix, --exit-non-zero-on-fix]
+      # Run the formatter.
+      - id: ruff-format
+        name: Run ruff formatter
+
+  - repo: https://github.com/PyCQA/bandit
+    rev: 1.8.3
+    hooks:
+      # Run the security checker
+      - id: bandit
+        name: Run Bandit (Python security checker)
+        args: ["-c", "bandit.toml", "-r", "src/"]

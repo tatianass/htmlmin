@@ -5,3 +5,8 @@ _build
 *.egg-info
 dist
 .tox
+
+.eggs
+.idea
+.coverage
+.DS_Store
