@@ -3,6 +3,8 @@ name: Publish Python 🐍 distribution 📦 to PyPI and TestPyPI
 on:
   push:
     branches: [ master ]
+  release:
+    branches: [ master ]
   # Allow manual triggering
   workflow_dispatch:
 
@@ -36,7 +38,7 @@ jobs:
   publish-to-pypi:
     name: >-
       Publish Python 🐍 distribution 📦 to PyPI
-    if: startsWith(github.ref, 'refs/tags/')  # only publish to PyPI on tag pushes
+    if: startsWith(github.ref, 'refs/tags/v')  # only publish to PyPI on tag pushes
     needs:
       - build
     runs-on: ubuntu-latest
