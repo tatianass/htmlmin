@@ -4,7 +4,18 @@ build-backend = "setuptools.build_meta"
 
 # Project information
 [project]
+name = "htmlmin4"
+version = "0.2.12"
+readme = "README.md"
+requires-python = ">=3.9"
+
 dependencies = [
+    # add dependencies here
+]
+
+# dependencies for development and testing
+[dependency-groups]
+dev = [
     "ruff>=0.9.9",
     "pyright>=1.1.396",
     "pip-tools>=7.4.1",
@@ -15,13 +26,21 @@ dependencies = [
     "setuptools",
     "ipdb",
     "twine",
-    # add dependencies here
 ]
 
-name = "htmlmin4"
-version = "0.2.20"
-readme = "README.md"
-requires-python = ">=3.9"
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.9.9",
+    "pyright>=1.1.396",
+    "pip-tools>=7.4.1",
+    "pytest>=8.3.5",
+    "pytest-cov>=6.0.0",
+    "pre-commit>=4.1.0",
+    "bandit>=1.8.3",
+    "setuptools",
+    "ipdb",
+    "twine",
+]
 
 
 # coverage config

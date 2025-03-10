@@ -29,9 +29,14 @@ clean:
 install:
     uv sync
 
+# Install for development
+install-dev:
+    uv sync --dev
+
 # Generate requirements
 compile:
 	uv pip compile pyproject.toml -o requirements.txt
+	uv pip compile pyproject.toml -o requirements-dev.txt --extra dev
 
 # Format files using ruff
 format:

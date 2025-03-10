@@ -386,9 +386,25 @@ wheels = [
 
 [[package]]
 name = "htmlmin4"
-version = "0.2.19"
+version = "0.2.20"
 source = { editable = "." }
-dependencies = [
+
+[package.optional-dependencies]
+dev = [
+    { name = "bandit" },
+    { name = "ipdb" },
+    { name = "pip-tools" },
+    { name = "pre-commit" },
+    { name = "pyright" },
+    { name = "pytest" },
+    { name = "pytest-cov" },
+    { name = "ruff" },
+    { name = "setuptools" },
+    { name = "twine" },
+]
+
+[package.dev-dependencies]
+dev = [
     { name = "bandit" },
     { name = "ipdb" },
     { name = "pip-tools" },
@@ -403,14 +419,29 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
-    { name = "bandit", specifier = ">=1.7.10" },
+    { name = "bandit", marker = "extra == 'dev'", specifier = ">=1.8.3" },
+    { name = "ipdb", marker = "extra == 'dev'" },
+    { name = "pip-tools", marker = "extra == 'dev'", specifier = ">=7.4.1" },
+    { name = "pre-commit", marker = "extra == 'dev'", specifier = ">=4.1.0" },
+    { name = "pyright", marker = "extra == 'dev'", specifier = ">=1.1.396" },
+    { name = "pytest", marker = "extra == 'dev'", specifier = ">=8.3.5" },
+    { name = "pytest-cov", marker = "extra == 'dev'", specifier = ">=6.0.0" },
+    { name = "ruff", marker = "extra == 'dev'", specifier = ">=0.9.9" },
+    { name = "setuptools", marker = "extra == 'dev'" },
+    { name = "twine", marker = "extra == 'dev'" },
+]
+provides-extras = ["dev"]
+
+[package.metadata.requires-dev]
+dev = [
+    { name = "bandit", specifier = ">=1.8.3" },
     { name = "ipdb" },
-    { name = "pip-tools", specifier = ">=6.12.2" },
-    { name = "pre-commit", specifier = ">=3.5.0" },
-    { name = "pyright", specifier = ">=1.1.334" },
-    { name = "pytest", specifier = ">=7.2.0" },
-    { name = "pytest-cov", specifier = ">=4.0.0" },
-    { name = "ruff", specifier = ">=0.9.4" },
+    { name = "pip-tools", specifier = ">=7.4.1" },
+    { name = "pre-commit", specifier = ">=4.1.0" },
+    { name = "pyright", specifier = ">=1.1.396" },
+    { name = "pytest", specifier = ">=8.3.5" },
+    { name = "pytest-cov", specifier = ">=6.0.0" },
+    { name = "ruff", specifier = ">=0.9.9" },
     { name = "setuptools" },
     { name = "twine" },
 ]
