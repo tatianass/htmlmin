@@ -20,7 +20,7 @@ dependencies = [
 name = "htmlmin3"
 version = "0.2.12"
 readme = "README.md"
-requires-python = ">=3.*"
+requires-python = ">=3.2"
 
 # coverage config
 [tool.coverage.paths]
@@ -37,7 +37,7 @@ fail_under = 70
 # linting config
 [tool.ruff]
 line-length = 88
-target-version = "py311"
+target-version = "py313"
 
 [tool.ruff.lint]
 select = ["E", "F", "I"]
@@ -82,7 +82,6 @@ classifiers = [
     "License :: OSI Approved :: BSD License",
     "Operating System :: OS Independent",
     "Programming Language :: Python",
-    "Programming Language :: Python :: 2.7",
     "Programming Language :: Python :: 3.2",
     "Programming Language :: Python :: 3.3",
     "Topic :: Text Processing :: Markup :: HTML",
