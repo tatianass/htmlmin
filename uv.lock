@@ -223,7 +223,7 @@ wheels = [
 ]
 
 [[package]]
-name = "htmlmin"
+name = "htmlmin3"
 version = "0.2.12"
 source = { editable = "." }
 dependencies = [

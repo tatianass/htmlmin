@@ -17,7 +17,7 @@ dependencies = [
     "twine"
     # add dependencies here
 ]
-name = "htmlmin"
+name = "htmlmin3"
 version = "0.2.12"
 readme = "README.md"
 requires-python = ">=3.13"
@@ -89,7 +89,7 @@ classifiers = [
 ]
 
 [python-entrypoint-reference]
-console_scripts = "htmlmin = htmlmin.command:main"
+console_scripts = "htmlmin3 = htmlmin3.command:main"
 
 [project.urls]
 Homepage = "https://github.com/tatianass/htmlmin"
