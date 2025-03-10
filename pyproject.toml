@@ -5,22 +5,30 @@ build-backend = "setuptools.build_meta"
 # Project information
 [project]
 dependencies = [
-    "ruff",
-    "pyright",
-    "pip-tools",
-    "pytest",
-    "pytest-cov",
-    "pre-commit",
-    "bandit",
     "setuptools",
     "ipdb",
-    "twine"
+    "twine",
+    "pytest",
+    "pytest-cov",
+    "pre-commit"
     # add dependencies here
 ]
-name = "htmlmin3"
-version = "0.2.17"
+
+name = "htmlmin4"
+version = "0.2.18"
 readme = "README.md"
 requires-python = ">=3.7"
+
+#[dependency-groups]
+#dev = [
+#    "ruff>=0.9.4",
+#    "pyright>=1.1.334",
+#    "pip-tools>=6.12.2",
+#    "pytest>=7.2.0",
+#    "pytest-cov>=4.0.0",
+#    "pre-commit>=3.5.0",
+#    "bandit>=1.7.10",
+#]
 
 # coverage config
 [tool.coverage.paths]
@@ -96,7 +104,7 @@ classifiers = [
 ]
 
 [python-entrypoint-reference]
-console_scripts = "htmlmin3 = htmlmin3.command:main"
+console_scripts = "htmlmin4 = htmlmin4.command:main"
 
 [project.urls]
 Homepage = "https://github.com/tatianass/htmlmin"
