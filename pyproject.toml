@@ -19,7 +19,7 @@ dependencies = [
 ]
 
 name = "htmlmin4"
-version = "0.2.19"
+version = "0.2.20"
 readme = "README.md"
 requires-python = ">=3.9"
 
