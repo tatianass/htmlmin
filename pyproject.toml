@@ -18,9 +18,9 @@ dependencies = [
     # add dependencies here
 ]
 name = "htmlmin3"
-version = "0.2.13"
+version = "0.2.12"
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.*"
 
 # coverage config
 [tool.coverage.paths]
