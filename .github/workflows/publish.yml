@@ -3,10 +3,6 @@ name: Publish Python 🐍 distribution 📦 to PyPI and TestPyPI
 on:
   push:
     branches: [ master ]
-  release:
-    branches: [ master ]
-  # Allow manual triggering
-  workflow_dispatch:
 
 jobs:
   build:
@@ -34,30 +30,6 @@ jobs:
         with:
           name: python-package-distributions
           path: dist/
-
-  publish-to-pypi:
-    name: >-
-      Publish Python 🐍 distribution 📦 to PyPI
-    if: startsWith(github.ref, 'refs/tags/v')  # only publish to PyPI on tag pushes
-    needs:
-      - build
-    runs-on: ubuntu-latest
-    environment:
-      name: pypi
-      url: https://pypi.org/p/htmlmin4  # Replace <package-name> with your PyPI project name
-    permissions:
-      id-token: write  # IMPORTANT: mandatory for trusted publishing
-
-    steps:
-      - name: Download all the dists
-        uses: actions/download-artifact@v4
-        with:
-          name: python-package-distributions
-          path: dist/
-      - name: Publish distribution 📦 to PyPI
-        with:
-          verbose: true
-        uses: pypa/gh-action-pypi-publish@release/v1
 
   github-release:
     name: >-
