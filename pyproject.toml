@@ -18,7 +18,7 @@ dependencies = [
     # add dependencies here
 ]
 name = "htmlmin3"
-version = "0.2.12"
+version = "0.2.14"
 readme = "README.md"
 requires-python = ">=3.2"
 
