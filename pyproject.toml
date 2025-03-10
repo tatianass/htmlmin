@@ -6,19 +6,19 @@ build-backend = "setuptools.build_meta"
 [project]
 dependencies = [
     "ruff",
-    "pyright>=1.1.396",
-    "pip-tools>=7.4.1",
-    "pytest>=8.3.5",
-    "pytest-cov>=6.0.0",
-    "pre-commit>=4.1.0",
-    "bandit>=1.8.3",
+    "pyright",
+    "pip-tools",
+    "pytest",
+    "pytest-cov",
+    "pre-commit",
+    "bandit",
     "setuptools",
     "ipdb",
     "twine"
     # add dependencies here
 ]
 name = "htmlmin3"
-version = "0.2.15"
+version = "0.2.16"
 readme = "README.md"
 requires-python = ">=3.2"
 
@@ -84,7 +84,20 @@ classifiers = [
     "Programming Language :: Python",
     "Programming Language :: Python :: 3.2",
     "Programming Language :: Python :: 3.3",
-    "Topic :: Text Processing :: Markup :: HTML",
+    "Programming Language :: Python :: 3.4",
+    "Programming Language :: Python :: 3.5",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Rust",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: Quality Assurance",
 ]
 
 [python-entrypoint-reference]
