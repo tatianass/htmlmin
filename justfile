@@ -47,3 +47,13 @@ pre-commit:
     pre-commit run --all-files
 
 alias fix := pre-commit
+
+# Packaging for pyp
+package:
+    python3 -m pip install --upgrade build
+    python3 -m build
+
+# Upload package
+deploy:
+    python3 -m pip install --upgrade twine
+    python3 -m twine upload --repository htmlmin2 dist/*

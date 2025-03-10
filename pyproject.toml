@@ -13,7 +13,8 @@ dependencies = [
     "pre-commit>=4.1.0",
     "bandit>=1.8.3",
     "setuptools",
-    "ipdb"
+    "ipdb",
+    "twine"
     # add dependencies here
 ]
 name = "htmlmin"
@@ -55,3 +56,41 @@ executionEnvironments = [
         "src",
     ] },
 ]
+
+# This should be your name or the name of the organization who originally
+# authored the project, and a valid email address corresponding to the name
+# listed.
+authors = [
+    { name = "Dave Mankoff", email = "mankyd@gmail.com" },
+    { name = "Tatiana Saturno", email = "tatianassaturno@gmail.com" },
+]
+
+# This should be your name or the names of the organization who currently
+# maintains the project, and a valid email address corresponding to the name
+# listed.
+maintainers = [
+    { name = "Dave Mankoff", email = "mankyd@gmail.com" },
+    { name = "Tatiana Saturno", email = "tatianassaturno@gmail.com" },
+]
+
+# Classifiers help users find your project by categorizing it.
+#
+# For a list of valid classifiers, see https://pypi.org/classifiers/
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 2.7",
+    "Programming Language :: Python :: 3.2",
+    "Programming Language :: Python :: 3.3",
+    "Topic :: Text Processing :: Markup :: HTML",
+]
+
+[python-entrypoint-reference]
+console_scripts = "htmlmin = htmlmin.command:main"
+
+[project.urls]
+Homepage = "https://github.com/tatianass/htmlmin"
+Issues = "https://github.com/tatianass/htmlmin/issues"
